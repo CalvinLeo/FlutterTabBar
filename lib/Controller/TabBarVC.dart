@@ -12,8 +12,8 @@ class TabBarVC extends StatefulWidget {
 }
 
 class TabBarState extends State<TabBarVC> {
-  @override
-  int _tabBarIdx = 0;
+  
+  var _tabBarIdx = 0;
   var _appBarTitles;
   var _pageList;
 

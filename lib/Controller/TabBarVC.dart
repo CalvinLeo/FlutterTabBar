@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'HomeVC.dart';
 import 'FindVC.dart';
 import 'MeVC.dart';
+import 'package:dbcDemo/Common/AppIcons.dart';
 
 class TabBarVC extends StatefulWidget {
   @override
@@ -19,13 +20,14 @@ class TabBarState extends State<TabBarVC> {
   @override
   Widget build(BuildContext context) {
     initData();
+    
     return Scaffold(
       body: _pageList[_tabBarIdx],
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.home), title: getTabTitle(0)),
-          BottomNavigationBarItem(icon: Icon(Icons.find_in_page), title: getTabTitle(1)),
-          BottomNavigationBarItem(icon: Icon(Icons.person),title: getTabTitle(2)),
+          BottomNavigationBarItem(icon: AppIcons.home, title: getTabTitle(0)),
+          BottomNavigationBarItem(icon: AppIcons.find, title: getTabTitle(1)),
+          BottomNavigationBarItem(icon: AppIcons.me, title: getTabTitle(2)),
         ],
         type: BottomNavigationBarType.fixed,
         currentIndex: _tabBarIdx,
